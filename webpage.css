@@ -1,49 +1,75 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #333;
-    color: white;
-    margin: 0;
-    padding: 0;
-}
-.container {
-    width: 80%;
-    margin: auto;
-    text-align: center;
-}
-.logo {
-    margin-top: 20px;
-}
-.description {
-    margin: 20px 0;
-}
-.login-section {
-    margin-bottom: 20px;
-}
-input[type=text], input[type=password] {
-    width: 200px;
+@media screen and (max-width: 600px) 
+{
+    .navbar__menu { display: none;}
+    .navbar__menu.active { display: block;
+                            width: 100%;
+                            margin: 10px 0;}
+    .navbar__links {display: none;}
+    .navbar__links.active {width: 100%;
+                            display: flex;
+                            justify-content: center;}
+    .navbar__links.active li:first-child svg{margin-left: 0;}                            
+    .navbar__menu.active li {display: flex;
+                            justify-content: center;
+                            margin: 5px 0;}
+    .navbar__bars svg {fill: var(--point-color);}
+    .navbar__bars {display: block;
+                    border: none;
+                    background-color: transparent;
+                    cursor: pointer;
+                    position: absolute;
+                    right: 8px;}
+    .navbar {flex-direction: column;
+                position: relative;
+                align-items: flex-start;}
+      
+    body {font-family: 'Arial', sans-serif;
+            background-color: #333;
+            color: white;
+            margin: 0;
+            padding: 0;}
+
+    .container {display: flex;
+                flex-direction: column;
+                align-items: center;
+                border: 3px solid orange;}
+
+    .logo {justify-content: flex-end;
+            margin-right: 1000px;}
+
+    .description {margin-right: 1000px;
+                    justify-content: flex-start;}
+
+    .login-section {margin-left: 1000px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    border: 3px solid orange;}
+
+    input[type=text], input[type=password] 
+    {width: 200px;
     padding: 10px;
     margin: 5px 0;
     border: none;
     background: #555;
-    color: white;
-}
-.button {
-    width: 215px;
-    padding: 10px;
-    background-color: #f90;
-    color: #333;
-    border: none;
-    cursor: pointer;
-}
-.button:hover {
-    background-color: #e80;
-}
-.cards {
-    display: flex;
-    justify-content: space-between;
-}
-.card {
-    background: #444;
-    padding: 20px;
-    width: 30%;
+    color: white;}
+
+    .button {width: 215px;
+            padding: 10px;
+            background-color: #f90;
+            color: #333;
+            border: none;
+            cursor: pointer;}
+
+    .button:hover {background-color: #e80;}
+
+    .cards {display: flex;
+            justify-content: flex-start;
+            text-align: left;
+            margin-right: 1000px;}
+
+    .card {background: #444;
+            padding: 20px;
+            width: 30%;
+            text-align: left;}
 }
